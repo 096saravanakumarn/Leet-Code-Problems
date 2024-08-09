@@ -6,7 +6,7 @@ class Solution {
             if (index == -1)
                 return false;
             else {
-                lastIndex = index+1;
+                lastIndex = index + 1;
             }
         }
         return true;
