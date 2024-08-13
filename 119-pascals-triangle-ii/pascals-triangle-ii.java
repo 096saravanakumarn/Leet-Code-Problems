@@ -1,6 +1,6 @@
 class Solution {
     public List<Integer> getRow(int rowIndex) {
-        List<List<Integer>> lists = new ArrayList<List<Integer>>();
+        List<List<Integer>> pascal = new ArrayList<List<Integer>>();
         for (int i = 0; i <= rowIndex + 1; i++){
             List<Integer> list = new ArrayList<Integer>();
             for(int j = 0; j <= i; j++){
@@ -8,12 +8,12 @@ class Solution {
                     list.add(1);
                 }
                 else{
-                    List<Integer> prev = lists.get(i-1);
+                    List<Integer> prev = pascal.get(i-1);
                     list.add(prev.get(j)+prev.get(j-1));
                 }
             }
-            lists.add(list);
+            pascal.add(list);
         }
-        return lists.get(rowIndex);
+        return pascal.get(rowIndex);
     }
 }
