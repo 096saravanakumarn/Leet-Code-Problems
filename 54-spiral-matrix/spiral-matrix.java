@@ -5,7 +5,7 @@ class Solution {
 		int cs = 0, ce = arr[0].length;
 
 		List<Integer> list = new ArrayList<>();
-		while( list.size()<(arr.length)*(arr[0].length)) {
+		while(rs<re && cs<ce) {
 			for(int i=cs;i<ce;i++) {
 				list.add(arr[rs][i]);
 			}
