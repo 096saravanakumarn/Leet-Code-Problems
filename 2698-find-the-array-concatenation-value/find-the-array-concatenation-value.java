@@ -7,7 +7,6 @@ class Solution {
                 String s = "";
                 s+=nums[l]+""+nums[r];
                 sum+=Integer.parseInt(s);
-                System.out.print(s+" "+sum+" ");
                 l++;
                 r--;
         }
