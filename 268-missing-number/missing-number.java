@@ -15,7 +15,7 @@
 // }
 class Solution {
     public int missingNumber(int[] nums) {
-        HashSet<Integer>set=new HashSet<>();
+        List<Integer> set = new ArrayList<>();
         for(int n : nums){
            set.add(n);
         }
