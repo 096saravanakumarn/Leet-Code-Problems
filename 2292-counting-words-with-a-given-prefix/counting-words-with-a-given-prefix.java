@@ -5,7 +5,7 @@ class Solution {
         for(int i=0;i<words.length;i++){
             String s = "";
             if(words[i].length() >= pref.length())
-                 s += words[i].substring(0,pref.length());
+                 s = words[i].substring(0,pref.length());
             if(s.equals(pref)){
                 c++;
             }
