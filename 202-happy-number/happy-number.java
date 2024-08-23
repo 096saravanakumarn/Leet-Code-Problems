@@ -7,7 +7,6 @@ class Solution {
                 int a = n%10;
                 sum+=a*a;
                 n/=10;
-                 System.out.print(sum);
             }
             n = sum;
              
