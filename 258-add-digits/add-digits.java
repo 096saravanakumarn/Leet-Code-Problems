@@ -4,8 +4,7 @@ class Solution {
         while (num > 9) {
             sum = 0;
             while (num > 0) {
-                int a = num % 10;
-                sum += a;
+                sum += num % 10;
                 num /= 10;
             }
             num = sum;
