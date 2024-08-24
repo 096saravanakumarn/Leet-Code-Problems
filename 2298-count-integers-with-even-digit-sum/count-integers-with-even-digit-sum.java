@@ -6,8 +6,7 @@ class Solution {
             int n = i;
             sum = 0;
             while(n>0){
-                int a = n%10;
-                sum+=a;
+                sum+=n%10;
                 n=n/10;
             }
             if(sum%2==0)
