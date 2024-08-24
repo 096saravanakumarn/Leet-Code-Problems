@@ -10,10 +10,8 @@ class Solution {
                 sum+=a;
                 n=n/10;
             }
-            
-            if(sum%2==0){
+            if(sum%2==0)
                 c++;
-            }
         }
         return c;
     }
