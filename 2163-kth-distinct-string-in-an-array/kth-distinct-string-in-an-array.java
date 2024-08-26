@@ -7,7 +7,6 @@ class Solution {
             map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
         }
         for (String ch : map.keySet()) {
-            System.out.print(ch);
             if (map.get(ch) == 1) {
                 list.add(ch);
             }
