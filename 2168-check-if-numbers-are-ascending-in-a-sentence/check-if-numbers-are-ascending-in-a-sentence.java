@@ -9,12 +9,8 @@ class Solution {
                 list.add(t);
             }
         }
-        int arr[] = new int[list.size()];
-        for(int i=0;i<arr.length;i++){
-            arr[i] = list.get(i);
-        }
-        for(int i=0;i<arr.length-1;i++){
-            if(arr[i]>=arr[i+1]){
+        for(int i=0;i<list.size()-1;i++){
+            if(list.get(i)>=list.get(i+1)){
                 return false;
             }
         }
