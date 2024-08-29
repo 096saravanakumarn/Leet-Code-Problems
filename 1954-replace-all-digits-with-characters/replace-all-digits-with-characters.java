@@ -9,7 +9,7 @@ class Solution {
                 st+=ch[t+v];
             }
             else{
-                 t = (s.charAt(i)-'a');
+                 t = s.charAt(i)-'a';
                 st+=s.charAt(i);
             }
         }
