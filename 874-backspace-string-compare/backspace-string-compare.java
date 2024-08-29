@@ -19,14 +19,14 @@ class Solution {
                 st2.pop();
             }
         }
-        String s1="";
-        String s2="";
-        for(char c:st1){
-            s1+=c;
+        String res1="";
+        while(!st1.isEmpty()){
+            res1+=st1.pop();
         }
-        for(char c:st2){
-            s2+=c;
+        String res2="";
+        while(!st2.isEmpty()){
+            res2+=st2.pop();
         }
-        return s1.equals(s2);
+        return res1.equals(res2);
     }
 }
