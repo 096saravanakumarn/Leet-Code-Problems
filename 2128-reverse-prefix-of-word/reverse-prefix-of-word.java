@@ -17,7 +17,6 @@ class Solution {
                 break;
             }
         }
-        System.out.print(ind);
         for(int i=ind;i<word.length();i++){
             st.append(word.charAt(i));
         }
