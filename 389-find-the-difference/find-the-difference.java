@@ -1,21 +1,14 @@
 import java.util.*;
 class Solution {
     public char findTheDifference(String s, String t) {
-        String s1[] = s.split("");
-        String s2[] = t.split("");
-        Arrays.sort(s1);
-        Arrays.sort(s2);
-        String c ="";
-        for(int i=0;i<s2.length;i++){
-            if(i == s2.length-1){
-                 c = s2[i];
-            return c.charAt(0);
-           }
-           if(!s2[i].equals(s1[i])){
-                c = s2[i];
-            return c.charAt(0);
-           }
+        int c1 = 0;
+        int c2 = 0;
+        for(char c:s.toCharArray()){
+            c1+=(int)c;
         }
-        return '0';
+        for(char c:t.toCharArray()){
+            c2+=(int)c;
+        }
+        return (char)(c2-c1);
     }
 }
