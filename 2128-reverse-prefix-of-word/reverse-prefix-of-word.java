@@ -17,9 +17,7 @@ class Solution {
                 break;
             }
         }
-        for(int i=ind;i<word.length();i++){
-            st.append(word.charAt(i));
-        }
+        st.append(word.substring(ind,word.length()));
         return st.toString();
     }
 }
