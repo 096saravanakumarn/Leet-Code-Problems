@@ -10,7 +10,6 @@ class Solution {
             }
             list.add(sum);
         }
-        System.out.print(list);
         return false;
     }
 }
