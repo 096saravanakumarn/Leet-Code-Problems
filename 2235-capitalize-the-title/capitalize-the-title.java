@@ -1,30 +1,30 @@
 class Solution {
     public String capitalizeTitle(String title) {
         String st[] = title.split(" ");
-        String str = "";
+        StringBuilder str = new StringBuilder();
         for(int i=0;i<st.length;i++){
             for(int j=0;j<st[i].length();j++){
                 if(Character.isUpperCase(st[i].charAt(j))){
-                    str+=Character.toLowerCase(st[i].charAt(j));
+                    str.append(Character.toLowerCase(st[i].charAt(j)));
                 }
                 else
-                    str+=st[i].charAt(j);
+                    str.append(st[i].charAt(j));
             }
-            str+=" ";
+            str.append(" ");
         }
-        String st1[] = str.split(" ");
-        String s1 = "";
+        String st1[] = str.toString().split(" ");
+        StringBuilder s1 = new StringBuilder();
         for(int i=0;i<st1.length;i++){
             for(int j=0;j<st1[i].length();j++){
                 if(j==0 && st1[i].length()>2){
-                    s1+=Character.toUpperCase(st1[i].charAt(j));
+                    s1.append(Character.toUpperCase(st1[i].charAt(j)));
                 }
                 else
-                    s1+=st1[i].charAt(j);
+                    s1.append(st1[i].charAt(j));
             }
             if(i!=st1.length-1)
-            s1+=" ";
+            s1.append(" ");
         }
-        return s1;
+        return s1.toString();
     }
 }
