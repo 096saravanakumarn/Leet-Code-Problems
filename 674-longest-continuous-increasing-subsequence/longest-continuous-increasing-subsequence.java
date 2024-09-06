@@ -10,9 +10,7 @@ class Solution {
                 else
                     break;
             }
-            if(max<c)
-                max = c;
-          
+            max = Math.max(max,c);
         }
         return max+1;
     }
