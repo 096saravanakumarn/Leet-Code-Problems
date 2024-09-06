@@ -5,14 +5,14 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             c = 0;
             for(int j=i;j<nums.length-1;j++){
-                if(nums[j]<nums[j+1]){
+                if(nums[j]<nums[j+1])
                     c++;
-                }
-                else{
+                else
                     break;
-                }
             }
-            max = Math.max(max,c);
+            if(max<c)
+                max = c;
+          
         }
         return max+1;
     }
