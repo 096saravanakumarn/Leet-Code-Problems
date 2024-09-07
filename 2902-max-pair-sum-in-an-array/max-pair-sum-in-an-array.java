@@ -12,8 +12,8 @@ class Solution {
             arr[i] = max;
         }
         int max1 = 0;
+        int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
                     sum = nums[i] + nums[j];
