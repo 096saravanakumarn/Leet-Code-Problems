@@ -1,16 +1,15 @@
 class Solution {
     public int maxSum(int[] nums) {
         int arr[] = new int[nums.length];
-        int k = 0;
-        for (int i : nums) {
-            int num = i;
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
             int max = 0;
             while (num > 0) {
                 int t = num % 10;
                 max = Math.max(t, max);
                 num /= 10;
             }
-            arr[k++] = max;
+            arr[i] = max;
         }
         int max1 = 0;
         for (int i = 0; i < arr.length; i++) {
