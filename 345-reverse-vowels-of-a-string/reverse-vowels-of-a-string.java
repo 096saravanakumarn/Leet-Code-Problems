@@ -9,14 +9,12 @@ class Solution {
                 ch[i] = '/';
             }
         }
+        String sb="";
         for(int i=0;i<s.length();i++){
             if(ch[i] == '/' && !stack.isEmpty())
                 ch[i] = stack.pop();
+    sb+=ch[i];
         }
-        String sb="";
-        for(int i=0;i<ch.length;i++){
-            sb+=ch[i];
-        }
-        return sb.toString();
+        return sb;
     }
 }
