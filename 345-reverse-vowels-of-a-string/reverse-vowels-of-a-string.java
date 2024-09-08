@@ -10,9 +10,8 @@ class Solution {
                 ch[i] = '/';
             }
         }
-       
         for(int i=0;i<s.length();i++){
-            if(ch[i] == '/')
+            if(ch[i] == '/' && !stack.isEmpty())
                 ch[i] = stack.pop();
                 sb.append(ch[i]);
         }
