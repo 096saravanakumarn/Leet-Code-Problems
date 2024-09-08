@@ -3,16 +3,13 @@ class Solution {
         Stack<Character> stack = new Stack<>();
         StringBuilder st = new  StringBuilder();
         for(char c:s.toCharArray()){
-            if(Character.isDigit(c) && !stack.isEmpty()){
+            if(Character.isDigit(c) && !stack.isEmpty())
                 stack.pop();
-            }
-            else{
+            else
                 stack.push(c);
-            }
         }
-        for(int i=stack.size()-1;i>=0;i--){
-            st.append(stack.get(i));
-        }
+        while(!stack.isEmpty())
+            st.append(stack.pop());
         return st.reverse().toString();
     }
 }
