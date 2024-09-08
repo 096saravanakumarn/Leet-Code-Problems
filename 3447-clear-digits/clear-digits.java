@@ -10,8 +10,8 @@ class Solution {
                 stack.push(c);
             }
         }
-        while(!stack.isEmpty()){
-            st.append(stack.pop());
+        for(int i=stack.size()-1;i>=0;i--){
+            st.append(stack.get(i));
         }
         return st.reverse().toString();
     }
