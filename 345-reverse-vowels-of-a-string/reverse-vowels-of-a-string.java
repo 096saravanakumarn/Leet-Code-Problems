@@ -12,7 +12,7 @@ class Solution {
         }
        
         for(int i=0;i<s.length();i++){
-            if(ch[i] == '/' && !stack.isEmpty())
+            if(ch[i] == '/')
                 ch[i] = stack.pop();
                 sb.append(ch[i]);
         }
