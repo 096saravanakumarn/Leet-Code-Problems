@@ -7,8 +7,8 @@ class Solution {
         }
         for (int i = 0; i < magazine.length(); i++) {
             if (list.contains(magazine.charAt(i))) {
-                int ind = list.indexOf(magazine.charAt(i));
-                list.remove(ind);
+                int k = list.indexOf(magazine.charAt(i));
+                list.remove(k);
             }
         }
         return list.isEmpty();
