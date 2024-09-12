@@ -14,7 +14,7 @@
 // }
 class Solution {
     public int findSpecialInteger(int[] arr) {
-        int a= (arr.length)/4+1;
+        int a= (arr.length)/4;
         int count = 1;
         for(int i=1;i<arr.length;i++){
             if(arr[i-1] == arr[i]){
@@ -23,7 +23,7 @@ class Solution {
             else{
                 count = 1;
             }
-            if(count >= a){
+            if(count > a){
                 return arr[i];
             }
         }
