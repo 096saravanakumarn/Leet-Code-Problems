@@ -1,15 +1,21 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
     public int sumOfUnique(int[] arr) {
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int i=0;i<arr.length;i++){
-            map.put(arr[i],map.getOrDefault(arr[i],0)+1);
-        }
+        Map<Integer, Integer> map = new HashMap<>();
         int sum = 0;
-        for(Map.Entry<Integer,Integer> e:map.entrySet()){
-            if(e.getValue() == 1){
-                sum+=e.getKey();
+        
+        for (int num : arr) {
+            if (!map.containsKey(num)) {
+                map.put(num, 1);
+                sum += num;
+            } else if (map.get(num) == 1) {
+                map.put(num, 2);
+                sum -= num;
             }
         }
+        
         return sum;
     }
 }
