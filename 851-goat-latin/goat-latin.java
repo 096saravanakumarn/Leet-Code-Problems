@@ -1,7 +1,8 @@
 class Solution {
     public String toGoatLatin(String sentence) {
         String st[] = sentence.split(" ");
-        StringBuilder a = new StringBuilder();;
+        StringBuilder a = new StringBuilder();
+        ;
         for (int i = 0; i < st.length; i++) {
             if (st[i].charAt(0) == 'a' || st[i].charAt(0) == 'e' || st[i].charAt(0) == 'i' || st[i].charAt(0) == 'o'
                     || st[i].charAt(0) == 'u' || st[i].charAt(0) == 'A' || st[i].charAt(0) == 'E'
@@ -11,7 +12,7 @@ class Solution {
                     s += "a";
                 }
                 for (int j = 0; j < st[i].length(); j++) {
-                    a .append(st[i].charAt(j));
+                    a.append(st[i].charAt(j));
                 }
                 a.append(i != st.length - 1 ? s + " " : s);
             } else {
@@ -20,7 +21,7 @@ class Solution {
                 for (int k = 0; k < i + 2; k++) {
                     s += "a";
                 }
-                a.append(i!= st.length - 1 ? s1 + st[i].charAt(0) + s + " " : s1 + st[i].charAt(0) + s);
+                a.append(i != st.length - 1 ? s1 + st[i].charAt(0) + s + " " : s1 + st[i].charAt(0) + s);
             }
         }
         return a.toString();
