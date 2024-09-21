@@ -9,9 +9,9 @@ class Solution {
             int count = 0;
             if (s1.contains(words[i].charAt(0) + ""))
                 c = 1;
-            if (s2.contains(words[i].charAt(0) + ""))
+            else if (s2.contains(words[i].charAt(0) + ""))
                 c = 2;
-            if (s3.contains(words[i].charAt(0) + ""))
+            else if (s3.contains(words[i].charAt(0) + ""))
                 c = 3;
             if (c == 1) {
                 for (int j = 0; j < words[i].length(); j++) {
